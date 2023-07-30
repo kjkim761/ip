@@ -1,1 +1,1 @@
-www.kjkim761.github.io/ip
+kjkim761.github.io/ip
