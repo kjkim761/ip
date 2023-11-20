@@ -1,17 +1,20 @@
 ---
-layout: none
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	{% for post in site.posts %}{% unless post.unpublished == false %}<url>
-		<loc>{{ site.url }}{{ post.url }}</loc>
-		<lastmod>{% if post.sitemap.lastmod %}{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</lastmod>{% if post.sitemap.changefreq %}
-		<changefreq>{{ post.sitemap.changefreq }}</changefreq>{% endif %}{% if post.sitemap.priority %}
-		<priority>{{ post.sitemap.priority }}</priority>{% endif %}
-	</url>{% endunless %}{% endfor %}
-	{% for page in site.pages %}{% if page.sitemap != null %}<url>
-		<loc>{{ site.url }}{{ page.url | replace: 'index.html', '' }}</loc>{% if page.sitemap.changefreq %}
-		<changefreq>{{ page.sitemap.changefreq }}</changefreq>{% endif %}{% if page.sitemap.priority %}
-		<priority>{{ page.sitemap.priority }}</priority>{% endif %}
-	</url>{% endif %}{% endfor %}
+    {% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
+    </url>
+    {% endfor %}
+
+    {% for page in site.pages %}
+    {% if page.layout != nil %}
+    {% if page.layout != 'feed' %}
+    <url>
+        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+    </url>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
 </urlset>
