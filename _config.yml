@@ -1,4 +1,5 @@
 plugins:
   - jekyll-sitemap
   - jekyll-remote-theme
-remote_theme: mmistakes/minimal-mistakes@4.24.0
+remote_theme: pages-themes/leap-day@v0.2.0
+exclude: *.md
