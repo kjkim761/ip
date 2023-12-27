@@ -3,8 +3,10 @@ plugins:
   - jekyll-sitemap
 remote_theme: pages-themes/leap-day@v0.2.0
 exclude:
-  - '*.md'
+  - "*.md"
 defaults:
   -
+    scope:
+      path: "*.docx"
     values:
       sitemap: true
