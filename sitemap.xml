@@ -25,14 +25,5 @@ layout: null
        </url>
     {% endif %}
   {% endfor %}
-  {% for file in site.static_files %}
-    {% if file.sitemap != null and file.sitemap != empty %}
-      <url>
-        <loc>{{ site.url }}{{ file.url }}</loc>
-        <lastmod>{{ file.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-        <changefreq>{{ file.sitemap.changefreq }}</changefreq>
-        <priority>{{ file.sitemap.priority }}</priority>
-       </url>
-    {% endif %}
-  {% endfor %}
+  
 </urlset>
