@@ -6,7 +6,5 @@ exclude:
   - "*.md"
 defaults:
   -
-    scope:
-      path: "*.docx"
     values:
       sitemap: true
