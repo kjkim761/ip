@@ -4,7 +4,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
     <url>
-      <loc>{{ site.url }}{{ page.url | absolute_url }}</loc>
+      <loc>{{ page.url | absolute_url }}</loc>
       <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -13,7 +13,7 @@
 
   {% for post in site.posts %}
     <url>
-      <loc>{{ site.url }}{{ post.url | absolute_url }}</loc>
+      <loc>{{ post.url | absolute_url }}</loc>
       <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   {% for file in site.static_files %}
     <url>
-      <loc>{{ site.url }}{{ file.path }}</loc>
+      <loc>{{ site.url }}{{ file.path | relative_url }}</loc>
       <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
