@@ -4,4 +4,3 @@ plugins:
 remote_theme: pages-themes/leap-day@v0.2.0
 exclude: 
   - '*.md'
-  - 'google6cc86c80f96f63ae.html'
