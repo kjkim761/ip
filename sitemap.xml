@@ -1,16 +1,29 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+    <url>
+      <loc>{{ site.url }}{{ page.url | absolute_url }}</loc>
+      <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  {% endfor %}
+
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ post.url | absolute_url }}</loc>
+      <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  {% endfor %}
+
   {% for file in site.static_files %}
-    {% if file.path contains '.docx' %}
-      <url>
-        <loc>{{ site.url }}{{ file.path }}</loc>
-        <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-    {% endif %}
+    <url>
+      <loc>{{ site.url }}{{ file.path }}</loc>
+      <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
   {% endfor %}
 </urlset>
