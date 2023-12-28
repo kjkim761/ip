@@ -8,8 +8,6 @@
       {% if page.last_modified_at %}
         <lastmod>
           {{ page.last_modified_at | date_to_xmlschema }}
-          <!-- Debug Output -->
-          {{ page.last_modified_at }}
         </lastmod>
       {% endif %}
       <changefreq>weekly</changefreq>
@@ -23,8 +21,6 @@
       {% if post.last_modified_at %}
         <lastmod>
           {{ post.last_modified_at | date_to_xmlschema }}
-          <!-- Debug Output -->
-          {{ post.last_modified_at }}
         </lastmod>
       {% endif %}
       <changefreq>weekly</changefreq>
@@ -38,8 +34,6 @@
       {% if file.modified_time %}
         <lastmod>
           {{ file.modified_time | date_to_xmlschema }}
-          <!-- Debug Output -->
-          {{ file.modified_time }}
         </lastmod>
       {% endif %}
       <changefreq>weekly</changefreq>
