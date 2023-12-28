@@ -5,7 +5,13 @@
   {% for page in site.pages %}
     <url>
       <loc>{{ page.url | absolute_url }}</loc>
-      <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% if page.last_modified_at %}
+        <lastmod>
+          {{ page.last_modified_at | date_to_xmlschema }}
+          <!-- Debug Output -->
+          {{ page.last_modified_at }}
+        </lastmod>
+      {% endif %}
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -14,7 +20,13 @@
   {% for post in site.posts %}
     <url>
       <loc>{{ post.url | absolute_url }}</loc>
-      <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% if post.last_modified_at %}
+        <lastmod>
+          {{ post.last_modified_at | date_to_xmlschema }}
+          <!-- Debug Output -->
+          {{ post.last_modified_at }}
+        </lastmod>
+      {% endif %}
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -23,7 +35,13 @@
   {% for file in site.static_files %}
     <url>
       <loc>{{ site.url }}{{ file.path | relative_url }}</loc>
-      <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
+      {% if file.modified_time %}
+        <lastmod>
+          {{ file.modified_time | date_to_xmlschema }}
+          <!-- Debug Output -->
+          {{ file.modified_time }}
+        </lastmod>
+      {% endif %}
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
