@@ -9,3 +9,5 @@ First, I installed older version of VirtualBox(6.10).
 <br>After installing guest OS, "insert Guest Additions CD Image" and run autorun.sh script.
 
 That's all. Finally it works fine.
+
+Tip: It's always recommended to use "Snapshot" feature of VirtualBox for restoring.
