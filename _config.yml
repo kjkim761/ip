@@ -1,5 +1,6 @@
 plugins:
   - jekyll-remote-theme
+  - jekyll-toc
 remote_theme: ogobrecht/hydebar
 exclude:
   - "exclude.md"   
