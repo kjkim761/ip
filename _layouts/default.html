@@ -23,7 +23,9 @@
     <div class="wrapper">
 
 <!--content-begin-->
-{{ content }}
+<div id="markdown-content">
+    {{ content | inject_anchors }}
+</div>
 <!--content-end-->
 
     </div>
@@ -45,7 +47,7 @@
         <div id="table-of-contents">
           {{ content | toc_only }}
         </div>
-      </div>>
+      </div>
     </div>
   </div>
 
