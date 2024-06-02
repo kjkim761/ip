@@ -1,6 +1,6 @@
 plugins:
   - jekyll-remote-theme
-theme: sighingnow/jekyll-gitbook
+remote_theme: sighingnow/jekyll-gitbook
 exclude:
   - "exclude.md"
 toc:
