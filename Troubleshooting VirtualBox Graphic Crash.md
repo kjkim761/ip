@@ -1,3 +1,5 @@
+    Troubleshooting VirtualBox Graphic Crash
+
 I am using VirtualBox to play other OS on windows. I wanted to play Linux guest OS (Ubuntu). But VirtualBox kept crashing.
 
 Through numerous trials and errors, I found a way to resolve this problem. 

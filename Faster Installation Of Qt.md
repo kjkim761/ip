@@ -1,3 +1,5 @@
+    Faster Installation Of Qt
+
 Are you experiencing very slow speed of installation of Qt? Then try this.
 
 Did you know that Qt online installer has CLI? It does have. According to this official documentation(https://wiki.qt.io/Online_Installer_4.x), we can use mirror for installing Qt if we use CLI. For the list of mirrors, check this link(https://download.qt.io/static/mirrorlist/).
