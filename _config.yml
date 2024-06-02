@@ -2,5 +2,5 @@ plugins:
   - jekyll-remote-theme
 theme: minima
 exclude:
-  - "*.md"
+  - "exclude.md"
 
