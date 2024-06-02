@@ -43,12 +43,12 @@
       </header>
       <div>
         <div id="table-of-contents">
-          {% toc %}
+          {{ content | toc_only }}
         </div>
         <div id="markdown-content">
-          {{ content }}
+          {{ content | inject_anchors }}
         </div>
-      </div>
+      </div>>
     </div>
   </div>
 
