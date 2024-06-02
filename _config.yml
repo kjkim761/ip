@@ -9,6 +9,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       toc: true
+      layout: spec
 remote_theme: eecs485staff/primer-spec
 plugins:
   - jekyll-remote-theme
