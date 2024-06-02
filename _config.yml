@@ -4,3 +4,9 @@ plugins:
 remote_theme: ogobrecht/hydebar
 exclude:
   - "exclude.md"   
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      toc: true
