@@ -19,35 +19,20 @@
 
 <body>
 
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-
 <!--content-begin-->
 <div id="markdown-content">
-    {{ content | inject_anchors }}
+  {{ content | inject_anchors }}
 </div>
 <!--content-end-->
 
-    </div>
-  </main>
 
   <input type="checkbox" id="nav-trigger" class="nav-trigger" />
   <label for="nav-trigger" class="nav-button"><span class="nav-icon"></span></label>
   <label for="nav-trigger" class="overlay"></label>
 
   <div class="sidebar">
-    <div class="wrapper">
-      <header class="site-header">
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          <h2>{{ site.title | smartify }}</h2>
-          <p class="meta">{{ site.description | smartify }}</p>
-        </a>
-      </header>
-      <div>
-        <div id="table-of-contents">
-            {{ content | toc_only }}
-        </div>
-      </div>
+    <div id="table-of-contents">
+      {{ content | toc_only }}
     </div>
   </div>
 
