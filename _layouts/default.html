@@ -41,18 +41,14 @@
           <p class="meta">{{ site.description | smartify }}</p>
         </a>
       </header>
-      <nav class="site-nav">
-
-<!--navigation-content-begin-->
-{%- if site.sidebar.pages %}{% include nav-list-pages-main.html %}{% endif %}
-{%- if site.sidebar.categories %}{% include nav-list-categories.html header=true %}{% endif %}
-{%- if site.sidebar.tags %}{% include nav-list-tags.html header=true %}{% endif %}
-{%- if site.sidebar.contact %}{% include nav-list-contact.html header=true %}{% endif %}
-{%- if site.sidebar.legal %}{% include nav-list-pages-legal.html header=true %}{% endif %}
-<a class="meta" href="https://github.com/ogobrecht/hydebar">Powered by Jekyll & HydeBar</a>
-<!--navigation-content-end-->
-
-      </nav>
+      <div>
+        <div id="table-of-contents">
+          {{ content | toc_only }}
+        </div>
+        <div id="markdown-content">
+          {{ content | inject_anchors }}
+        </div>
+      </div>
     </div>
   </div>
 
