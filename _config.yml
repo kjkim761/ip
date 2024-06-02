@@ -1,9 +1,0 @@
-plugins:
-  - jekyll-remote-theme
-remote_theme: pages-themes/leap-day@v0.2.0
-exclude:
-  - "exclude.md"
-toc:
-    enabled: true
-    h_min: 1
-    h_max: 3
