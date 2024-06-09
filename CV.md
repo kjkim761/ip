@@ -1,4 +1,4 @@
-- 	Kyoungjihn Kim
+- Kyoungjihn Kim
 - 
 - kjkim761@gmail.com
 - 
