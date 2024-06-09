@@ -10,7 +10,7 @@ Computer Science
 # Selected Publications
 
 # Honors
-```text
+```Text
 Academic excellence scholarship from Hanyang University (2020~2023)
 Full scholarship.
 
